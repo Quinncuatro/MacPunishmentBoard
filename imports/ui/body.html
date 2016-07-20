@@ -1,0 +1,31 @@
+<body>
+  <div class="container-fluid">
+    <div class="col-md-3 col-xs-0"></div>
+    <div class="col-md-6 col-xs-12">
+      <header>
+	<div class="text-center">
+          <h2>McKeighry.com</h2>
+
+          <h4>Mac wants his domain back. Personally, I think he should earn it. What do YOU think he should do?</h4>
+        </div>
+
+        {{#if currentUser}}
+          {{> loginButtons}}
+          <form class="new-task">
+            <input type="text" name="text" placeholder="Type to add something new for homeboy to do" />
+          </form>
+        {{else}}
+          {{> loginButtons}}
+          <h6>Register to submit and vote.</h6>
+        {{/if}}
+      </header>
+
+      <ul>
+        {{#each tasks}}
+          {{> task}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-2 col-xs-0"></div>
+  </div>
+</body>

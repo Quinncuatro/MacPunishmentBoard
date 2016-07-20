@@ -1,0 +1,36 @@
+<template name="task">
+  <li>
+      <div class="row">
+        <div class="col-sm-3 col-md-2 col-xs-12">
+          <div class="row">
+            <div class="col-sm-2 col-md-2 col-xs-2 text-center">
+              <span class="text">{{votes}}</span>
+            </div>   
+            {{#if currentUser}}
+            <div class="col-sm-1 col-md-1 col-xs-0"></div>
+            <div class="col-sm-3 col-md-3 col-xs-4 text-center">
+              <button class="upvote"><i class="fa fa-thumbs-o-up img-center"></i></button>
+            </div> 
+            <div class="col-sm-1 col-md-1 col-xs-0"></div>
+            <div class="col-sm-3 col-md-3 col-xs-4 text-center">
+              <button class="downvote"><i class="fa fa-thumbs-o-down img-center"></i></button>
+            </div>
+            <div class="col-sm-0 col-md-0 col-xs-2"></div>
+            {{/if}}
+          </div>
+        </div>
+        <div class="col-sm-7 col-md-8 col-xs-12">
+          <span class="text">{{text}}</span>
+        </div>
+	<div class="col-sm-2 col-md-2 col-xs-12">
+	  <span class="text-right">- {{username}}</span>
+        </div>
+
+        <!--{{#if isOwner}}
+        <div class="col-md-2 col-xs-2 text-right">
+          <button class="delete"><i class="fa fa-times img-center"></i></button>
+        </div>
+        {{/if}}-->
+      </div>
+  </li>
+</template>
